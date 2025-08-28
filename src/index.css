@@ -17,6 +17,14 @@
 html,
 body,
 #root {
+  font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -24,8 +32,14 @@ body,
   min-width: 320px;
   min-height: 100vh;
   background-color: #ffffff; /* Default light background */
-  color: #213547; /* Default text color */
 }
+.text-white {
+  color: #ffffff !important;
+}
+
+/*.container {
+  @apply px-6 md:px-12 lg:px-20;
+} */
 
 /* Links */
 a {

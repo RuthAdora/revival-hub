@@ -7,6 +7,9 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import GivingSection from "./pages/Giving";
+import LatestTeachings from "./pages/Teachings";
+import UpcomingEvents from "./pages/Events";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="giving" element={<GivingSection />} />
+            <Route path="teachings" element={<LatestTeachings />} />
+            <Route path="events" element={<UpcomingEvents />} />
           </Routes>
         </main>
 
