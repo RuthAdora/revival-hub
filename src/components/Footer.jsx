@@ -12,18 +12,10 @@ import {
 const Footer = () => {
   const quickLinks = [
     { name: "About Us", href: "/about" },
-    { name: "Our Ministries", href: "/services" },
+    // { name: "Our Ministries", href: "/services" },
     { name: "Latest Teachings", href: "/services" },
     { name: "Events", href: "/gallery" },
     { name: "Contact Us", href: "/contact" },
-  ];
-
-  const ministries = [
-    { name: "Youth Ministry", href: "/services" },
-    { name: "Women Ministry", href: "/services" },
-    { name: "Men Ministry", href: "/services" },
-    { name: "Children Ministry", href: "/services" },
-    { name: "Worship Team", href: "/services" },
   ];
 
   const socialLinks = [
@@ -87,21 +79,6 @@ const Footer = () => {
           </div>
 
           {/* Ministries */}
-          <div className="flex-1 min-w-[160px]">
-            <h4 className="font-semibold text-base mb-4">Ministries</h4>
-            <ul className="space-y-2 text-sm">
-              {ministries.map((ministry, index) => (
-                <li key={index}>
-                  <a
-                    href={ministry.href}
-                    className="hover:text-orange-400 transition-colors"
-                  >
-                    {ministry.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
 
           {/* Contact Info */}
           <div className="flex-1 min-w-[220px]">

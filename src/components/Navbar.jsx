@@ -1,17 +1,14 @@
 import React from "react";
+import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className="bg-slate-800 text-white sticky top-0 z-50 shadow-md h-14 flex items-center pb-2">
+    <nav className="bg-slate-800 text-white sticky top-0 z-50 flex items-center shadow-md h-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between w-full">
           {/* Logo */}
           <div className="flex items-center">
-            <img
-              src="/logo.png"
-              alt="RevivalHub Logo"
-              className="h-8 w-auto object-contain block"
-            />
+            <img src="/logo2.png" alt="RevivalHub Logo" className="logo" />
           </div>
 
           {/* Navigation Items - evenly spread */}
@@ -25,12 +22,7 @@ const Navbar = () => {
             >
               About Us
             </a>
-            <a
-              href="/ministries"
-              className="hover:text-orange-400 transition-colors"
-            >
-              Ministries
-            </a>
+
             <a
               href="/teachings"
               className="hover:text-orange-400 transition-colors"
@@ -48,6 +40,12 @@ const Navbar = () => {
               className="hover:text-orange-400 transition-colors"
             >
               Giving
+            </a>
+            <a
+              href="/president"
+              className="hover:text-orange-400 transition-colors"
+            >
+              President
             </a>
           </div>
 

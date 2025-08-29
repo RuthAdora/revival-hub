@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Target,
   Eye,
@@ -90,7 +91,7 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-slate-800 to-slate-600 text-white py-20">
+      <div className="bg-gradient-to-r from-slate-800 to-slate-600  py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">About Us</h1>
           <p className="text-xl text-gray-200">
@@ -197,8 +198,8 @@ const AboutPage = () => {
               Our Leadership
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              God has placed an anointed leader who carry His heart for revival
-              and transformation.
+              God has placed an anointed leader who carries His heart for
+              revival and transformation.
             </p>
           </div>
 
@@ -219,7 +220,17 @@ const AboutPage = () => {
                 <p className="text-orange-600 font-medium mb-3">
                   {leader.role}
                 </p>
-                <p className="text-gray-600">{leader.description}</p>
+                <p className="text-gray-600 mb-4">{leader.description}</p>
+
+                {/* 👇 Add More button */}
+                {leader.role.toLowerCase().includes("president") && (
+                  <Link
+                    to="/president"
+                    className="inline-block bg-orange-500  px-4 py-2 rounded-md font-semibold hover:bg-orange-600 transition-colors"
+                  >
+                    More
+                  </Link>
+                )}
               </div>
             ))}
           </div>
