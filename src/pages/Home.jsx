@@ -102,8 +102,10 @@ const Home = () => {
       <section className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 py-12">
         {/* Latest Teachings */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Latest Teachings</h3>
-          <div className="space-y-4">
+          <h3 className="text-xl font-semibold mb-4 text-center">
+            Latest Teachings
+          </h3>
+          <div className="space-y-4 text-center">
             <div className="bg-gray-100 p-4 rounded-md">
               <p className="font-medium">
                 The Anointing That Breaks Yokes – Isaiah 19:27
@@ -117,40 +119,65 @@ const Home = () => {
               <div className="text-sm text-blue-700">Watch | Read</div>
             </div>
           </div>
-          <button className="mt-4 bg-blue-700 text-white px-4 py-2 rounded-md">
-            View All Teachings
-          </button>
+          <div className="flex justify-center mt-8">
+            <Link
+              to="/teachings"
+              className="bg-[#000080] text-white px-4 py-2 rounded-md hover:bg-blue-900 transition text-center"
+            >
+              View All Teachings
+            </Link>
+          </div>
         </div>
 
         {/* Giving / Partner */}
         <div>
-          <h3 className="text-xl font-semibold mb-4">Giving / Partner</h3>
+          <h3 className="text-xl font-semibold mb-4 text-center">
+            Giving / Partner
+          </h3>
           <div className="bg-gray-100 p-4 rounded-md">
-            <p className="text-sm">
+            <p className="text-sm text-center">
               Each one must give as he has decided in his heart, not reluctantly
               or under compulsion, for God loves a cheerful giver. (2 Cor. 8:7)
             </p>
           </div>
+
           <div className="mt-4 grid grid-cols-2 gap-4">
-            <button className="bg-blue-700 text-white px-4 py-2 rounded-md">
+            <Link
+              to="/giving"
+              className="bg-blue-700 text-white px-4 py-2 rounded-md text-center"
+            >
               Give via M-Pesa
-            </button>
-            <button className="bg-blue-600 text-white px-4 py-2 rounded-md">
+            </Link>
+            <Link
+              to="/giving"
+              className="bg-blue-600 text-white px-4 py-2 rounded-md text-center"
+            >
               Give Now
-            </button>
-            <button className="col-span-2 bg-blue-800 text-white px-4 py-2 rounded-md">
+            </Link>
+            <Link
+              to="/giving"
+              className="col-span-2 bg-blue-800 text-white px-4 py-2 rounded-md text-center"
+            >
               Bank Transfer
-            </button>
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Visit Us */}
+      {/* WhatsApp Prayer Contact */}
       <section className="text-center py-16 bg-gray-50">
-        <h3 className="text-xl font-semibold mb-4">Visit Us</h3>
-        <p>123 Revival S, City, Country</p>
-        <p>Sunday – 5:00 AM & Midweek – 6:30 PM</p>
-        <p className="mt-2 text-blue-700">(193) 455-7929</p>
+        <h3 className="text-xl font-semibold mb-4">Need Prayer?</h3>
+        <p className="mb-2">
+          Send us a message on WhatsApp and our team will pray with you.
+        </p>
+        <a
+          href="https://wa.me/254111755539?text=Hello%20Favor%20and%20Mercy%20Church,%20I%20would%20like%20to%20request%20a%20prayer"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-4 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition"
+        >
+          Chat with Us on WhatsApp
+        </a>
       </section>
     </div>
   );
