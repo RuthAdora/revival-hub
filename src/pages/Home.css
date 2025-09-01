@@ -20,7 +20,7 @@
 
 /* Style the paragraph text */
 .custom-text {
-  color: black; /* makes text white */
+  color: white; /* makes text white */
   font-weight: bold;
   margin-bottom: 1.5rem; /* optional spacing */
   line-height: 1.7; /* relaxed line spacing */
