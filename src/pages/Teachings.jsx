@@ -88,7 +88,7 @@ const LatesTeachings = () => {
             Facebook
           </a>
           <a
-            href="https://instagram.com"
+            href="https://www.instagram.com/apostlestevemm/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2 bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-md shadow-md transition"
