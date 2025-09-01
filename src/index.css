@@ -37,6 +37,18 @@ body,
 .text-white {
   color: gold !important;
 }
+/* Completely hide scrollbar globally */
+html,
+body {
+  overflow: auto;
+  -ms-overflow-style: none; /* IE and old Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
 
 /*.container {
   @apply px-6 md:px-12 lg:px-20;

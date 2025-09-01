@@ -296,9 +296,12 @@ const AboutPage = () => {
             His kingdom purposes.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="border border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white px-8 py-3 rounded-md font-semibold transition-colors">
+            <Link
+              to="/contact"
+              className="bg-[#000080] text-white px-6 py-3 rounded-full hover:bg-blue-900 transition text-center shadow-md"
+            >
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </div>
