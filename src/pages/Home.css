@@ -32,3 +32,9 @@
   text-decoration: underline;
   font-weight: 600;
 }
+@media screen and (max-width: 640px) {
+  .fullwidth-background {
+    min-height: auto; /* let it shrink to content height */
+    padding: 3rem 1rem; /* adjust padding if needed */
+  }
+}
