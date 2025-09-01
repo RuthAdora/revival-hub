@@ -163,7 +163,7 @@ const Home = () => {
           Send us a message on WhatsApp and our team will pray with you.
         </p>
         <a
-          href="https://wa.me/254111755539?text=Hello%20Revival%20and%20Global%20Hub,%20I%20would%20like%20to%20request%20a%20prayer"
+          href="https://wa.me/254111755539?text=Hello%20RevivalHub,%20I%20would%20like%20to%20request%20a%20prayer"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-4 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition"
