@@ -1,0 +1,8 @@
+.hero-section {
+  background-image: url("/home4.jpg");
+  background-size: cover; /* ensures it covers the whole screen */
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh; /* full screen height */
+  width: 100%; /* full width */
+}

@@ -5,6 +5,7 @@ import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
 import "./Gallery.css";
 import { Link } from "react-router-dom";
+import "./Home.css";
 
 const ministries = [
   { img: "/Gell1.jpg" },
@@ -34,16 +35,13 @@ const Home = () => {
   return (
     <div className="bg-white text-[#001F54]">
       {/* Hero Section */}
-      <section
-        className="relative bg-cover bg-center h-[80vh] flex items-center justify-center"
-        style={{ backgroundImage: "url('/banner.jpg')" }}
-      >
+      <section className="hero-section relative h-[80vh] flex items-center justify-center">
         {/* Overlay */}
-        <div className="absolute inset-0 bg-white bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-white bg-opacity-40"></div>
 
         {/* Hero Content */}
         <div className="relative text-center text-[#001F54] max-w-3xl px-4">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-white">
             Welcome to <br />
             RevivalHub Global Center
           </h1>
@@ -52,9 +50,11 @@ const Home = () => {
           </p>
 
           <div className="mt-6 flex flex-wrap justify-center gap-4">
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md">
-              Patner With Us
-            </button>
+            <Link to="/giving">
+              <button className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-md transition-colors">
+                Partner With Us
+              </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -105,24 +105,16 @@ const Home = () => {
           <h3 className="text-xl font-semibold mb-4 text-center">
             Latest Teachings
           </h3>
-          <div className="space-y-4 text-center">
-            <div className="bg-gray-100 p-4 rounded-md">
-              <p className="font-medium">
-                The Anointing That Breaks Yokes – Isaiah 19:27
-              </p>
-              <div className="text-sm text-blue-700">Watch | Read</div>
-            </div>
-            <div className="bg-gray-100 p-4 rounded-md">
-              <p className="font-medium">
-                The Power of Forgiveness – Matthew 3:14-15
-              </p>
-              <div className="text-sm text-blue-700">Watch | Read</div>
-            </div>
+          <div className="mt-8 text-center max-w-xl mx-auto">
+            <p className="text-lg font-medium text-gray-700 italic">
+              “Faith comes by hearing, and hearing by the Word of God.”
+            </p>
+            <p className="text-gray-600 font-semibold mt-2">– Romans 10:17</p>
           </div>
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-8 items-center py-10">
             <Link
               to="/teachings"
-              className="bg-[#000080] text-white px-4 py-2 rounded-md hover:bg-blue-900 transition text-center"
+              className="bg-[#000080] text-white px-6 py-2 rounded-full hover:bg-blue-900 transition text-center"
             >
               View All Teachings
             </Link>

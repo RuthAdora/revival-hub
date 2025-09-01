@@ -140,12 +140,14 @@ const GivingSection = () => {
           >
             Partner With Us
           </Link>
-          <Link
-            to="/giving/partner-info"
+          <a
+            href="https://wa.me/+254111755539?text=Hello%20I%20would%20like%20to%20learn%20more%20about%20partnership"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-orange-600 hover:text-orange-800 font-semibold px-6 py-3"
           >
             Learn More About Partnership
-          </Link>
+          </a>
         </div>
       </div>
     </div>

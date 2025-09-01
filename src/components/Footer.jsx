@@ -1,63 +1,73 @@
 import React from "react";
-import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
-  Mail,
-  Phone,
-  Heart,
-} from "lucide-react";
+import { Facebook, Instagram, Youtube, Mail, Phone, Heart } from "lucide-react";
+import { FaTiktok } from "react-icons/fa"; // ✅ TikTok icon
+import "./Footer.css";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const quickLinks = [
     { name: "About Us", href: "/about" },
-    // { name: "Our Ministries", href: "/services" },
     { name: "Latest Teachings", href: "/services" },
-    { name: "Events", href: "/gallery" },
+    { name: "Events", href: "/events" },
     { name: "Contact Us", href: "/contact" },
   ];
 
   const socialLinks = [
-    { icon: Facebook, href: "#", name: "Facebook" },
-    { icon: Twitter, href: "#", name: "Twitter" },
-    { icon: Instagram, href: "#", name: "Instagram" },
-    { icon: Youtube, href: "#", name: "YouTube" },
+    {
+      icon: Facebook,
+      href: "https://www.facebook.com/profile.php?id=61579206504792",
+      name: "Facebook",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/YourHandle",
+      name: "Instagram",
+    },
+    {
+      icon: Youtube,
+      href: "https://www.youtube.com/@revivalhubglobal",
+      name: "YouTube",
+    },
+    {
+      icon: FaTiktok, // ✅ React Icons TikTok
+      href: "https://www.tiktok.com/@apostlesteve001",
+      name: "TikTok",
+    },
   ];
 
   return (
-    <footer className="bg-[#0a192f] shadow-lg text-white !text-white">
+    <footer className="bg-[#0a192f] text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-4 py-10">
         {/* Top Section */}
         <div className="flex flex-wrap justify-between gap-8">
           {/* About Section */}
           <div className="flex-1 min-w-[220px]">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-slate-800 font-bold">R</span>
-              </div>
-              <div>
-                <div className="font-bold text-lg">RevivalHub</div>
-                <div className="text-xs">GLOBAL CENTER</div>
-              </div>
+            <div className="flex items-center">
+              <Link to="/">
+                <img
+                  src="/logo2.png"
+                  alt="RevivalHub Logo"
+                  className="logo cursor-pointer"
+                />
+              </Link>
             </div>
+
             <p className="mb-4 text-sm leading-relaxed">
               An Apostolic & Prophetic Equipping Base with a Global Vision.
             </p>
             <div className="flex space-x-3">
-              {socialLinks.map((social, index) => {
-                const IconComponent = social.icon;
-                return (
-                  <a
-                    key={index}
-                    href={social.href}
-                    className="w-8 h-8 bg-slate-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors"
-                    aria-label={social.name}
-                  >
-                    <IconComponent className="w-4 h-4" />
-                  </a>
-                );
-              })}
+              {socialLinks.map(({ icon: Icon, href, name }, index) => (
+                <a
+                  key={index}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 bg-slate-700 hover:bg-orange-500 rounded-full flex items-center justify-center transition-colors"
+                  aria-label={name}
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
             </div>
           </div>
 
@@ -65,20 +75,18 @@ const Footer = () => {
           <div className="flex-1 min-w-[160px]">
             <h4 className="font-semibold text-base mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              {quickLinks.map((link, index) => (
+              {quickLinks.map(({ name, href }, index) => (
                 <li key={index}>
                   <a
-                    href={link.href}
+                    href={href}
                     className="hover:text-orange-400 transition-colors"
                   >
-                    {link.name}
+                    {name}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Ministries */}
 
           {/* Contact Info */}
           <div className="flex-1 min-w-[220px]">
@@ -86,34 +94,19 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-orange-500" />
-                <span>(+254) 111-755-539</span>
+                <a href="tel:+254111755539" className="hover:underline">
+                  (+254) 111-755-539
+                </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-orange-500" />
-                <span>info@revivalhub.org</span>
+                <a
+                  href="mailto:revivalhubglobalcenter@gmail.com"
+                  className="hover:underline"
+                >
+                  revivalhubglobalcenter@gmail.com
+                </a>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="border-t border-slate-700 mt-8 pt-6">
-          <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-            <div>
-              <h4 className="font-semibold text-base mb-1">Stay Connected</h4>
-              <p className="text-sm">
-                Get the latest updates, teachings & events.
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-3 py-2 bg-slate-700 border border-slate-600 rounded-md text-sm text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-orange-500"
-              />
-              <button className="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded-md text-sm font-semibold transition-colors whitespace-nowrap">
-                Subscribe
-              </button>
             </div>
           </div>
         </div>
@@ -121,7 +114,8 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-slate-700 mt-6 pt-4 flex flex-col md:flex-row justify-between items-center">
           <p className="text-xs mb-2 md:mb-0">
-            © 2025 RevivalHub Global Center. All rights reserved.
+            © {new Date().getFullYear()} RevivalHub Global Center. All rights
+            reserved.
           </p>
           <div className="flex items-center space-x-1 text-xs">
             <span>Made with</span>

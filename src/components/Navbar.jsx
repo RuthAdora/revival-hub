@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -7,9 +8,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between w-full">
           {/* Logo */}
-          <div className="flex items-center">
-            <img src="/logo2.png" alt="RevivalHub Logo" className="logo" />
-          </div>
+          <Link to="/">
+            <img
+              src="/logo2.png"
+              alt="RevivalHub Logo"
+              className="logo cursor-pointer"
+            />
+          </Link>
 
           {/* Navigation Items - evenly spread */}
           <div className="flex-1 flex justify-around mx-8 text-sm font-bold text-blue-900">
@@ -47,13 +52,6 @@ const Navbar = () => {
             >
               President
             </a>
-          </div>
-
-          {/* Donate Button */}
-          <div>
-            <button className="bg-orange-500 hover:bg-orange-600 px-3 py-1.5 rounded-md text-sm font-semibold shadow-md transition-colors">
-              Donate
-            </button>
           </div>
         </div>
       </div>

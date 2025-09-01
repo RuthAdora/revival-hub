@@ -1,98 +1,123 @@
 import React from "react";
-import { Play, FileText, Calendar } from "lucide-react";
+import { Calendar, BookOpen, Facebook, Instagram, Youtube } from "lucide-react";
+import { FaTiktok } from "react-icons/fa"; // TikTok icon from react-icons
 
-const LatestTeachings = () => {
-  const teachings = [
+const LatesTeachings = () => {
+  const dailyTeachings = [
     {
       id: 1,
-      title: "The Anointing That Breaks Yokes",
-      scripture: "Isaiah 19:27",
-      date: "August 25, 2025",
-      description:
-        "Discover the power of God's anointing to break every yoke of bondage in your life.",
-      videoUrl: "#",
-      transcriptUrl: "#",
-      featured: true,
+      title: "Faith that Moves Mountains",
+      verse: "Matthew 17:20",
+      date: "September 1, 2025",
+      content:
+        "Jesus teaches us that even faith as small as a mustard seed has the power to move mountains. Believe and do not doubt.",
     },
     {
       id: 2,
-      title: "The Power of Forgiveness",
-      scripture: "Matthew 3:14-15",
-      date: "August 18, 2025",
-      description:
-        "Learn how forgiveness releases God's power in your life and relationships.",
-      videoUrl: "#",
-      transcriptUrl: "#",
-      featured: false,
+      title: "God’s Perfect Peace",
+      verse: "Isaiah 26:3",
+      date: "August 31, 2025",
+      content:
+        "Those who trust in the Lord will enjoy perfect peace. Keep your heart and mind fixed on Him.",
     },
     {
       id: 3,
-      title: "Walking in Divine Authority",
-      scripture: "Luke 10:19",
-      date: "August 11, 2025",
-      description:
-        "Understanding your authority as a believer in Christ Jesus.",
-      videoUrl: "#",
-      transcriptUrl: "#",
-      featured: false,
+      title: "The Lord is My Shepherd",
+      verse: "Psalm 23:1",
+      date: "August 30, 2025",
+      content:
+        "David reminds us that in God’s care, we lack nothing. His guidance and provision are constant.",
     },
   ];
 
   return (
-    <div className="py-12">
-      <div className="flex items-center justify-between mb-6">
-        <h3 className="text-2xl font-bold text-gray-800">Latest Teachings</h3>
-        <button className="text-blue-600 hover:text-blue-800 font-semibold">
-          View All
-        </button>
+    <div className="py-12 px-6 md:px-12 bg-gray-50 min-h-screen">
+      {/* Header */}
+      <div className="text-center mb-10">
+        <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
+          Daily Teachings
+        </h1>
+        <p className="text-lg text-gray-600">
+          Be encouraged and strengthened daily with God’s Word.
+        </p>
       </div>
 
-      <div className="space-y-6">
-        {teachings.map((teaching) => (
+      {/* Teachings List */}
+      <div className="space-y-8 max-w-3xl mx-auto">
+        {dailyTeachings.map((teaching) => (
           <div
             key={teaching.id}
-            className={`border-b border-gray-200 pb-6 ${
-              teaching.featured ? "bg-blue-50 p-4 rounded-lg border-none" : ""
-            }`}
+            className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition"
           >
-            <div className="flex items-start justify-between mb-3">
-              <div className="flex-1">
-                <h4 className="text-lg font-semibold text-gray-800 mb-2">
-                  {teaching.title}
-                </h4>
-                <div className="flex items-center space-x-4 text-sm text-gray-600 mb-3">
-                  <span className="font-medium">{teaching.scripture}</span>
-                  <span className="flex items-center space-x-1">
-                    <Calendar className="w-4 h-4" />
-                    <span>{teaching.date}</span>
-                  </span>
-                </div>
-                <p className="text-gray-700 mb-4">{teaching.description}</p>
-              </div>
+            <h2 className="text-xl font-semibold text-slate-900 mb-2">
+              {teaching.title}
+            </h2>
+            <div className="flex items-center text-sm text-gray-500 mb-3 space-x-4">
+              <span className="flex items-center space-x-1">
+                <BookOpen className="w-4 h-4" />
+                <span>{teaching.verse}</span>
+              </span>
+              <span className="flex items-center space-x-1">
+                <Calendar className="w-4 h-4" />
+                <span>{teaching.date}</span>
+              </span>
             </div>
-
-            <div className="flex flex-wrap gap-3">
-              <button className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-semibold transition-colors">
-                <Play className="w-4 h-4" />
-                <span>Watch</span>
-              </button>
-              <button className="flex items-center space-x-2 border border-gray-300 hover:bg-gray-50 text-gray-700 px-4 py-2 rounded-md font-semibold transition-colors">
-                <FileText className="w-4 h-4" />
-                <span>Read</span>
-              </button>
-              <button className="text-blue-600 hover:text-blue-800 font-semibold px-4 py-2">
-                Share
-              </button>
-            </div>
+            <p className="text-gray-700 leading-relaxed">{teaching.content}</p>
           </div>
         ))}
       </div>
 
-      <button className="w-full mt-6 bg-slate-800 hover:bg-slate-900 text-white py-3 rounded-md font-semibold transition-colors">
-        View All Teachings
-      </button>
+      {/* Social Media Footer Section */}
+      <div className="mt-16 text-center">
+        <h3 className="text-2xl font-bold text-slate-800 mb-4">
+          You can watch more and feel blessed
+        </h3>
+        <p className="text-gray-600 mb-6">
+          Follow us on our social media platforms for more teachings, videos,
+          and encouragement.
+        </p>
+
+        <div className="flex justify-center gap-6 flex-wrap">
+          <a
+            href="https://www.facebook.com/profile.php?id=61579206504792"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md shadow-md transition"
+          >
+            <Facebook className="w-5 h-5" />
+            Facebook
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-md shadow-md transition"
+          >
+            <Instagram className="w-5 h-5" />
+            Instagram
+          </a>
+          <a
+            href="https://www.youtube.com/@revivalhubglobal"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md shadow-md transition"
+          >
+            <Youtube className="w-5 h-5" />
+            YouTube
+          </a>
+          <a
+            href="https://www.tiktok.com/@apostlesteve001"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-black hover:bg-gray-900 text-white px-4 py-2 rounded-md shadow-md transition"
+          >
+            <FaTiktok className="w-5 h-5" />
+            TikTok
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default LatestTeachings;
+export default LatesTeachings;

@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Services from "./pages/Services";
-import Gallery from "./pages/Gallery";
+
 import Contact from "./pages/Contact";
 import GivingSection from "./pages/Giving";
 import LatestTeachings from "./pages/Teachings";
@@ -56,7 +56,6 @@ function App() {
 
             <Route path="/giving/partner" element={<PartnerPage />} />
             <Route path="/giving/partner-info" element={<PartnerInfoPage />} />
-            <Route path="/gallery" element={<Gallery />} />
           </Routes>
         </main>
 

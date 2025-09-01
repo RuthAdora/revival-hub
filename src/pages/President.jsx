@@ -18,7 +18,7 @@ const PresidentPage = () => {
         <div className="bg-white shadow-lg rounded-xl p-8">
           <div className="text-center mb-8">
             <img
-              src="/profile2.jpg" // replace with actual image path
+              src="/president1.jpg" // replace with actual image path
               alt="Apostle Steve"
               className="w-40 h-40 mx-auto rounded-full object-cover shadow-md mb-4"
             />

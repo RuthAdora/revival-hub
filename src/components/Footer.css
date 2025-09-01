@@ -1,0 +1,7 @@
+/* Footer.css */
+.logo {
+  height: 100px; /* Change to any pixel value you want */
+  width: auto; /* Keeps aspect ratio */
+  object-fit: contain;
+  display: block;
+}
