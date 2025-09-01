@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./About.css";
 import {
   Target,
   Eye,
@@ -45,7 +46,7 @@ const AboutPage = () => {
       name: "Apostle Steve",
       role: "President and Founder",
       description: "Leading with apostolic grace and prophetic insight.",
-      image: "/profile.jpg",
+      image: "/president1.jpg",
     },
   ];
 
@@ -117,11 +118,11 @@ const AboutPage = () => {
                 Our Mission
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                We exist to: • Host God's tangible presence through worship and
-                intercession • Train and activate the fivefold ministry gifts •
-                Provide healing, deliverance, and prophetic guidance • Equip the
-                saints for Kingdom exploits • Raise and release apostolic hubs
-                across the nations
+                We exist to: <br /> • Host God's tangible presence through
+                worship and intercession • Train and activate the fivefold
+                ministry gifts • Provide healing, deliverance, and prophetic
+                guidance • Equip the saints for Kingdom exploits • Raise and
+                release apostolic hubs across the nations
               </p>
             </div>
 
@@ -212,7 +213,7 @@ const AboutPage = () => {
                 <img
                   src={leader.image}
                   alt={leader.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                  className="leader-img"
                 />
                 <h4 className="text-xl font-semibold text-gray-800 mb-2">
                   {leader.name}

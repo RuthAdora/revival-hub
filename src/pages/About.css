@@ -1,0 +1,8 @@
+.leader-img {
+  width: 100px; /* smaller size */
+  height: 100px; /* keep it proportional */
+  border-radius: 50%; /* makes it circular */
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1rem auto; /* centers & adds bottom spacing */
+}

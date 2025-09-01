@@ -1,0 +1,9 @@
+.president-img {
+  width: 100px; /* smaller size than w-40 (~160px) */
+  height: 100px; /* keep proportions */
+  border-radius: 50%; /* makes it round */
+  object-fit: cover; /* ensures the image crops nicely */
+  display: block;
+  margin: 0 auto 1rem auto; /* centers it + bottom margin */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* soft shadow */
+}

@@ -50,7 +50,7 @@ const GivingSection = () => {
     },
     {
       type: "Special Projects",
-      description: "Support specific church initiatives",
+      description: "Empower Our Church Mission",
       icon: DollarSign,
     },
   ];

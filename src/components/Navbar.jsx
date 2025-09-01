@@ -46,12 +46,6 @@ const Navbar = () => {
             >
               Giving
             </a>
-            <a
-              href="/president"
-              className="hover:text-orange-400 transition-colors"
-            >
-              President
-            </a>
           </div>
         </div>
       </div>

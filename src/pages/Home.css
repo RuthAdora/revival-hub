@@ -6,3 +6,29 @@
   height: 50vh; /* full screen height */
   width: 100%; /* full width */
 }
+.fullwidth-background {
+  background-size: 100% auto; /* make image span full width */
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000; /* fallback color for empty spaces below */
+}
+
+/* Style the paragraph text */
+.custom-text {
+  color: black; /* makes text white */
+  font-weight: bold;
+  margin-bottom: 1.5rem; /* optional spacing */
+  line-height: 1.7; /* relaxed line spacing */
+}
+
+/* Ensure links inside this paragraph keep their own style */
+.custom-text a {
+  color: inherit; /* keeps the link color as defined in HTML */
+  text-decoration: underline;
+  font-weight: 600;
+}

@@ -120,6 +120,46 @@ const Home = () => {
             </Link>
           </div>
         </div>
+        {/* Testimony */}
+        <section
+          className="fullwidth-background "
+          style={{
+            backgroundImage: "url('/Gell20.jpg')", // replace with your background image
+          }}
+        >
+          {/* Dark overlay for readability */}
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+
+          {/* Content */}
+          <div className="relative container mx-auto px-6 md:px-12 flex justify-end text-right">
+            <div className="max-w-lg text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                TESTIMONIES
+              </h2>
+              <p className="italic text-lg mb-6">(FAITH STORIES)</p>
+              <p className="custom-text">
+                Your stories inspire us! <br />
+                If you’d like to share your testimony, <br />
+                please reach out to us via: <br />{" "}
+                <a
+                  href="mailto:revivalhubglobalcenter@gmail.com"
+                  className="font-semibold underline"
+                >
+                  revivalhubglobalcenter@gmail.com
+                </a>
+              </p>
+              <a
+                href="mailto:revivalhubglobalcenter@gmail.com?subject=Testimony"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="bg-black text-white px-6 py-3 rounded-full border border-yellow-400 hover:bg-yellow-500 hover:text-black transition shadow-lg">
+                  SEND TESTIMONY
+                </button>
+              </a>
+            </div>
+          </div>
+        </section>
 
         {/* Giving / Partner */}
         <div>
@@ -163,7 +203,7 @@ const Home = () => {
           Send us a message on WhatsApp and our team will pray with you.
         </p>
         <a
-          href="https://wa.me/254111755539?text=Hello%20RevivalHub,%20I%20would%20like%20to%20request%20a%20prayer"
+          href="https://wa.me/254111755539?text=Hello%20Revival%20and%20Global%20Hub,%20I%20would%20like%20to%20request%20a%20prayer"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block mt-4 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition"

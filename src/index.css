@@ -49,6 +49,38 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
 }
+/* Add horizontal padding only to text elements */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+span,
+a {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+/* Optional: Responsive spacing for bigger screens */
+@media (min-width: 768px) {
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  li,
+  span,
+  a {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
 
 /*.container {
   @apply px-6 md:px-12 lg:px-20;

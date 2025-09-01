@@ -1,6 +1,15 @@
 import React from "react";
-import { Calendar, BookOpen, Facebook, Instagram, Youtube } from "lucide-react";
+import {
+  Calendar,
+  BookOpen,
+  Facebook,
+  Instagram,
+  Youtube,
+  Play,
+  Repeat,
+} from "lucide-react";
 import { FaTiktok } from "react-icons/fa"; // TikTok icon from react-icons
+import "./Teachings.css";
 
 const LatesTeachings = () => {
   const dailyTeachings = [
@@ -14,7 +23,7 @@ const LatesTeachings = () => {
     },
     {
       id: 2,
-      title: "God’s Perfect Peace",
+      title: "God's Perfect Peace",
       verse: "Isaiah 26:3",
       date: "August 31, 2025",
       content:
@@ -26,32 +35,33 @@ const LatesTeachings = () => {
       verse: "Psalm 23:1",
       date: "August 30, 2025",
       content:
-        "David reminds us that in God’s care, we lack nothing. His guidance and provision are constant.",
+        "David reminds us that in God's care, we lack nothing. His guidance and provision are constant.",
     },
   ];
 
   return (
     <div className="py-12 px-6 md:px-12 bg-gray-50 min-h-screen">
       {/* Header */}
-      <div className="text-center mb-10">
-        <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-3">
-          Daily Teachings
-        </h1>
-        <p className="text-lg text-gray-600">
-          Be encouraged and strengthened daily with God’s Word.
-        </p>
-      </div>
 
-      {/* Teachings List */}
+      {/* Daily Teachings List */}
       <div className="space-y-8 max-w-3xl mx-auto">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-3">
+            Daily Reflections
+          </h2>
+          <p className="text-gray-600">
+            Fresh word from God for your daily walk
+          </p>
+        </div>
+
         {dailyTeachings.map((teaching) => (
           <div
             key={teaching.id}
             className="bg-white shadow-md rounded-lg p-6 hover:shadow-lg transition"
           >
-            <h2 className="text-xl font-semibold text-slate-900 mb-2">
+            <h3 className="text-xl font-semibold text-slate-900 mb-2">
               {teaching.title}
-            </h2>
+            </h3>
             <div className="flex items-center text-sm text-gray-500 mb-3 space-x-4">
               <span className="flex items-center space-x-1">
                 <BookOpen className="w-4 h-4" />

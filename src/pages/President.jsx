@@ -1,4 +1,5 @@
 import React from "react";
+import "./President.css";
 
 const PresidentPage = () => {
   return (
@@ -20,7 +21,7 @@ const PresidentPage = () => {
             <img
               src="/president1.jpg" // replace with actual image path
               alt="Apostle Steve"
-              className="w-40 h-40 mx-auto rounded-full object-cover shadow-md mb-4"
+              className="president-img"
             />
             <h2 className="text-2xl font-bold text-gray-800">Apostle Steve</h2>
             <p className="text-orange-600 font-medium">
