@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Services from "./pages/Services";
 
 import Contact from "./pages/Contact";
 import GivingSection from "./pages/Giving";
@@ -47,7 +46,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/president" element={<PresidentPage />} />
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
+
             <Route path="/contact" element={<Contact />} />
             <Route path="/giving" element={<GivingSection />} />
             <Route path="/giving/:method" element={<GivingDetails />} />
